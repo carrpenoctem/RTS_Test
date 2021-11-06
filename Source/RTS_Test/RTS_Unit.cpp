@@ -17,6 +17,12 @@ ARTS_Unit::ARTS_Unit()
 	// removing unnecessary mesh
 	GetMesh()->DestroyComponent();
 
+	// Initializing GAS
+	AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
+
+	// Initializing health
+	Health = CreateDefaultSubobject<UHealthAttributeSet>(TEXT("Health"));
+
 }
 
 // Called when the game starts or when spawned
